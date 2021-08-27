@@ -19,7 +19,7 @@ createGrid();
 reset.addEventListener('click', function () {
     const lis = document.querySelectorAll('.square');
     for (let item of lis) {
-        item.style.backgroundColor = "red";
+        item.style.backgroundColor = "white";
     }
     const prompt = Number(window.prompt("No of squares per side:"));
     if (!prompt || (prompt < 1 || prompt > 100)) {
@@ -43,14 +43,14 @@ function createGrid(n = 16) {
             let no = 320 / n - 2;
             square.style.width = `${no}px`;
             square.style.height = `${no}px`;
-            square.style.backgroundColor = "red";
-            square.style.border = "1px solid black";
+            square.style.backgroundColor = "white";
+            square.style.border = "1px solid #333333";
         }
     }
     let squares = document.querySelectorAll('.square');
     for (let box of squares) {
         box.addEventListener('mouseover', function () {
-            box.style.backgroundColor = "blue";
+            box.style.backgroundColor = "black";
         })
     }
 }
